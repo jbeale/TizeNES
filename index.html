@@ -17,14 +17,21 @@
                 "Working": [
                     
                     ['Super Mario Bros.', 'Super Mario Bros. (JU) (PRG0) [!].nes'],
-                ],
-
-                "Nearly Working": [
-                    ['Duck Hunt', 'roms/Duck Hunt (JUE) [!].nes']
                 ]
             })
         });
+
+        yoyoyo.ui.screen.css({'width':'1920px', 'height':'1080px'});
+        yoyoyo.ui.status.css({'z-index':'999', 'position':'absolute', 
+            'top':'0', 'left':'0', 'font-size':'2em', 'color':'white'});
+        $('body').css({'margin':'0'});
+        getTestRom('Super Mario Bros. (JU) (PRG0) [!].nes', function(data) {
+            yoyoyo.loadRom(data);
+            yoyoyo.start();
+            yoyoyo.ui.enable();
+        });
     });
+   
 </script>
 </body>
 </html>
