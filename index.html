@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="./jquery.min.js"></script>
+    <script src="./main.js"></script>
+    <script src="./dynamicaudio.js"></script>
+    <script src="./jsnes.js"></script>
+</head>
+<body>
+<div class="nes">Loading NES...</div>
+<script type="text/javascript">
+    $(function() {
+        window['yoyoyo'] = new JSNES({
+            'swfPath': '/swf/',
+            'ui': $('.nes').text('').JSNESUI({
+                "Working": [
+                    
+                    ['Super Mario Bros.', 'Super Mario Bros. (JU) (PRG0) [!].nes'],
+                ],
+
+                "Nearly Working": [
+                    ['Duck Hunt', 'roms/Duck Hunt (JUE) [!].nes']
+                ]
+            })
+        });
+    });
+</script>
+</body>
+</html>
